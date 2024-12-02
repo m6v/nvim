@@ -77,3 +77,19 @@ require('telescope-ag').setup()
 -- local status, _ = pcall(vim.cmd, 'colorscheme tokyonight')
 local status, _ = pcall(vim.cmd, 'colorscheme kanagawa')
 
+
+--[[
+-- см.: https://github.com/caenrique/buffer-term.nvim
+-- нужно понять как сделать кеймап не здесь, а вместе с остальными сочетаниями клавиш
+local buffer_term = require('buffer-term')
+
+buffer_term.setup({
+  terminal_options = {
+      start_insert = true,
+      buf_listed = true,
+      no_numbers = true,
+  }
+})
+vim.keymap.set({ 'n', 't' }, ';a', function() buffer_term.toggle('a') end)
+]]
+

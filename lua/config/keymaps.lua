@@ -35,7 +35,6 @@ map('n', '<ESC><ESC>', '<Cmd>q<CR>', {noremap = true, silent = false})
 -- Переключение между буферами
 map('n', '<Tab>', '<Cmd>bn<CR>', {noremap = true, silent = false})
 map('n', '<S-Tab>', '<Cmd>bp<CR>', {noremap = true, silent = false})
-map('t', '<Tab>', '<Cmd>bn<CR>', {noremap = true, silent = false})
 
 -- Комбинация gc работает, а # нет!?
 -- map('v', '#', 'gc', {noremap = true, silent = false})
@@ -48,6 +47,6 @@ map('i', 'dd', '<Cmd>d<CR>', {noremap = true, silent = false})
 map('n', '<F3>', '<Cmd>Neotree toggle<CR>', {noremap = true, silent = false})
 
 -- Открыть/Закрыть терминал
-map('n', '<F4>', '<Cmd>terminal<CR>', {noremap = true, silent = false})
-map('t', '<F4>', 'exit<CR>', {noremap = true, silent = false})
-
+map('n', '<F4>', '<Cmd>BufTermToggle<CR>', {noremap = true, silent = false})
+map('t', '<F4>', '<Cmd>BufTermToggle<CR>', {noremap = true, silent = false})
+map('t', '<ESC>', '<Cmd>BufTermToggle<CR>', {noremap = true, silent = false})
