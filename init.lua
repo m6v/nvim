@@ -40,3 +40,16 @@ vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
 
+-- При открытии терминала переключиться в режим вставки
+vim.api.nvim_command("autocmd TermOpen,BufEnter * if &buftype == 'terminal' | :startinsert | endif")
+--[[
+vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
+    pattern = { "*" },
+    callback = function()
+        if vim.opt.buftype:get() == "terminal" then
+            vim.cmd(":startinsert")
+        end
+    end
+})
+]]
+
