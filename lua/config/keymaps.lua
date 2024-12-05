@@ -22,6 +22,8 @@ map('v', '<Tab>', '>gv', {noremap = true, silent = false})
 map('v', '<S-Tab>', '<gv', {noremap = true, silent = false})
 
 -- Переход в режим вставки левой клавишей мыши
+-- TODO Здесь нужно анализировать в каком окне происходит клик, если обычный буфер,
+-- то переход в режим вставки, если нет, то ничего не делаем
 -- map('n', '<LeftMouse>', 'i', {noremap = true, silent = false})
 
 -- Сохранить файл по Ctrl+S
@@ -45,8 +47,10 @@ map('i', 'dd', '<Cmd>d<CR>', {noremap = true, silent = false})
 -- Показать/Скрыть Neotree
 -- map('n', '<C-t>', '<Cmd>Neotree toggle<CR>', {noremap = true, silent = false})
 map('n', '<F3>', '<Cmd>Neotree toggle<CR>', {noremap = true, silent = false})
+map('t', '<F3>', '<Cmd>Neotree toggle<CR>', {noremap = true, silent = false})
 
 -- Открыть/Закрыть терминал
-map('n', '<F4>', '<Cmd>BufTermToggle<CR>', {noremap = true, silent = false})
-map('t', '<F4>', '<Cmd>BufTermToggle<CR>', {noremap = true, silent = false})
-map('t', '<ESC>', '<Cmd>BufTermToggle<CR>', {noremap = true, silent = false})
+map('n', '<F4>', '<Cmd>ToggleTerm<CR>', {noremap = true, silent = false})
+map('t', '<F4>', '<Cmd>ToggleTerm<CR>', {noremap = true, silent = false})
+map('t', '<ESC><ESC>', '<Cmd>ToggleTerm<CR>', {noremap = true, silent = false})
+

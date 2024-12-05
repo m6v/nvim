@@ -1,8 +1,12 @@
 require("config.lazy")
-require('config.keymaps')
+require("config.keymaps")
+
+-- Вместо ошибок о попытках выйти без сохранения выдавать запрос с подтверждением дейситвий
+-- Можно установить запрос на конкретное действие, например, :confirm quitall
+vim.opt.confirm = true
 
 -- Использовать системный буфер обмена
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Установить опцию termguicolors для правильного отображения цветов в терминале
 vim.opt.termguicolors = true
@@ -32,7 +36,7 @@ vim.opt.smartindent = true
 -- см.: https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
 vim.opt.autochdir = true
 
--- Включить хоткеи для кириллической раскладки (не требуется, если использовать плагин vimplugin-ruscmd)
+-- Включить хоткеи для кириллической раскладки (при использовании плагина vimplugin-ruscmd не требуется)
 -- vim.opt.langmap = "ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz"
 
 -- Отображать непечатаемые символы пробелов и конца строк
@@ -40,8 +44,8 @@ vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
 
--- При открытии терминала переключиться в режим вставки
-vim.api.nvim_command("autocmd TermOpen,BufEnter * if &buftype == 'terminal' | :startinsert | endif")
+-- При открытии терминала переключиться в режим вставки (при использовании плагина bufterm не требуется)
+-- vim.api.nvim_command("autocmd TermOpen,BufEnter * if &buftype == 'terminal' | :startinsert | endif")
 --[[
 vim.api.nvim_create_autocmd({ "TermOpen", "BufEnter" }, {
     pattern = { "*" },

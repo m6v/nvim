@@ -1,4 +1,0 @@
-return {
-  'itmecho/bufterm.nvim',
-}
-
