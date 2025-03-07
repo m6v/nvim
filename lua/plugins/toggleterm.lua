@@ -5,6 +5,7 @@ return {
         direction = 'horizontal',
         start_in_insert = true,
         autochdir = true,
+        shade_terminals = false,
     }
   end
 }
