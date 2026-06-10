@@ -77,7 +77,6 @@ require('telescope-ag').setup()
 local status, _ = pcall(vim.cmd, 'colorscheme tokyonight')
 -- local status, _ = pcall(vim.cmd, 'colorscheme kanagawa')
 
-
 --[[
 -- см.: https://github.com/caenrique/buffer-term.nvim
 -- нужно понять как сделать кеймап не здесь, а вместе с остальными сочетаниями клавиш
