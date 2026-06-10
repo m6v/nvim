@@ -74,8 +74,8 @@ require('telescope').setup()
 require('telescope-ag').setup()
 
 -- Set the colorscheme to tokyonight using a protected call in case it isn't installed
--- local status, _ = pcall(vim.cmd, 'colorscheme tokyonight')
-local status, _ = pcall(vim.cmd, 'colorscheme kanagawa')
+local status, _ = pcall(vim.cmd, 'colorscheme tokyonight')
+-- local status, _ = pcall(vim.cmd, 'colorscheme kanagawa')
 
 
 --[[
